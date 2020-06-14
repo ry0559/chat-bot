@@ -3,7 +3,7 @@
   var botui = new BotUI('botui-app');
 
   
-  fetch("https://bot-sample-api.herokuapp.com", {
+  fetch("https://bot-sample-api.herokuapp.com/api/v1/posts", {
     method: "GET",
   }).then(response => response.json())
   .then(text => {
