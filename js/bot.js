@@ -1,6 +1,19 @@
 (function() {
 
   var botui = new BotUI('botui-app');
+
+  
+  fetch("https://bot-sample-api.herokuapp.com", {
+    method: "GET",
+  }).then(response => response.json())
+  .then(text => {
+    // console.log(text.data);
+    test = text.data
+    
+  });
+
+  
+
   //初期メッセージ．
   botui.message.add({
     content: 'こんにちは！！'
@@ -49,10 +62,10 @@
       let price = '価格'
       //入力されたキーワードを取得する
       let key = res.value;
-      if(key ===　price){
+      if(key === price){
         return botui.message.add({
           delay: 1500,
-          content: 'お客様に応じた価格をこちらからご回答させて頂きます。他社に負けない価格をご提示しております。'
+          content: test[6].content 
         }).then(askEnd);
       } else if(key === treatment){  
         return botui.message.add({
@@ -138,7 +151,7 @@
   function showQuestion() {
     botui.message.add({
       delay: 1500,
-      content: 'ログインする事でどの端末からでも登録が可能です'
+      content: test[1].content 
     
     }).then(askEnd);
   }
@@ -146,7 +159,7 @@
   function showAnalysis() {
     botui.message.add({
       delay: 1500,
-      content: 'よく見られている回答のランキング形式での表示や表示された回数も把握できるのでユーザーがどこに疑問を感じているかの分析が可能です'
+      content: test[2].content 
     
     }).then(askEnd);
   }
@@ -154,7 +167,7 @@
   function showDifficulty() {
     botui.message.add({
       delay: 1500,
-      content: '回答を登録するだけなので、簡単に始められます。回答の数が増えるほどわかりやすいサービスに育って行きます'
+      content: test[3].content 
     
     }).then(askEnd);
   }
@@ -187,14 +200,14 @@
   function showIndication() {
     botui.message.add({
       delay: 1500,
-      content: 'サイトごとに発効させていただくタグをページに埋め込むだけでチャットが表示されます'
+      content: test[4].content 
   }).then(askEnd);
   }
   // フリーワードで検索できる？ついて説明する関数
   function showSearch() {
     botui.message.add({
       delay: 1500,
-      content: 'はい。日本語、英語でも検索が可能です。'
+      content: test[5].content 
   }).then(askEnd);
   }
 
@@ -202,7 +215,7 @@
   function showPrice() {
     botui.message.add({
       delay: 1500,
-      content: 'お客様に応じた価格をこちらからご回答させて頂きます。他社に負けない価格をご提示しております。'
+      content: test[0].content 
     }).then(askEnd);
   }
 
