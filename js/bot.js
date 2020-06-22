@@ -51,28 +51,28 @@
       content: test[0].content
     }).then(function() {
       return botui.message.add({
-        delay: 2500,
+        delay: 1500,
         content: test[1].content
       });
     }).then(function() {
       return botui.message.add({
-        delay: 2500,
+        delay: 1500,
         content: test[2].content
         
       });
     }).then(function() {
       return botui.message.add({
-        delay: 2500,
+        delay: 1500,
         content: test[3].content
       });
     }).then(function() {
       return botui.message.add({
-        delay: 2500,
+        delay: 1500,
         content: test[4].content
       });
     }).then(function() {
       return botui.message.add({
-        delay: 2500,
+        delay: 1500,
         content: test[5].content
       });
     }).then(askEnd);
@@ -85,7 +85,7 @@
       content: test[6].content
     }).then(function() {
       return botui.message.add({
-        delay: 2500,
+        delay: 1500,
         content: test[7].content
         
       });
@@ -100,18 +100,18 @@
     }).then(function(){
       
       return botui.message.add({
-        delay: 2000,
+        delay: 1500,
         content: test[9].content
       });
       
     }).then(function(){
       return botui.message.add({
-        delay: 2000,
+        delay: 1500,
         content: test[10].content
       });
     }).then(function(){
       return botui.message.add({
-        delay: 2000,
+        delay: 1500,
         content: test[11].content
       });
     }).then(askEnd);
@@ -119,7 +119,7 @@
   // プログラムを終了するか聞く関数．
   function askEnd(){
     botui.message.add({
-      delay:2000,
+      delay:1500,
       content: '他に質問がありますか？'
     }).then(function() {
 
