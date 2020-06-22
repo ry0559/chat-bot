@@ -13,7 +13,7 @@
 
   //初期メッセージ．
   botui.message.add({
-    content: '初めまして、成田崚と申します'
+    content: '初めまして。28歳、男です'
   }).then(showQuestions);
 
 
